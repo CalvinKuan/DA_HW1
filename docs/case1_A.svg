@@ -1,0 +1,19 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN"
+"http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="720" height="900" viewBox="0 0 720 900" version="1.1"
+xmlns="http://www.w3.org/2000/svg"
+xmlns:xlink="http://www.w3.org/1999/xlink">
+<g fill-rule="evenodd"><path d="M 40,850 L 40,50 L 680,50 L 680,850 L 40,850 z " style="fill:none;stroke:rgb(130,130,130);stroke-width:1;stroke-dasharray:6,4"/></g>
+<g fill-rule="evenodd"><path d="M 40,850 L 40,690 L 200,690 L 200,850 L 40,850 z " style="fill-opacity:0.70;fill:rgb(140,169,221);stroke:rgb(48,69,107);stroke-width:1"/></g>
+<g fill-rule="evenodd"><path d="M 232,802 L 232,370 L 552,370 L 552,802 L 232,802 z " style="fill-opacity:0.70;fill:rgb(140,169,221);stroke:rgb(48,69,107);stroke-width:1"/></g>
+<g fill-rule="evenodd"><path d="M 520,850 L 520,770 L 680,770 L 680,850 L 520,850 z " style="fill-opacity:0.70;fill:rgb(140,169,221);stroke:rgb(48,69,107);stroke-width:1"/></g>
+<g fill-rule="evenodd"><path d="M 40,210 L 40,50 L 136,50 L 136,210 L 40,210 z " style="fill-opacity:0.70;fill:rgb(140,169,221);stroke:rgb(48,69,107);stroke-width:1"/></g>
+<g fill-rule="evenodd"><path d="M 520,178 L 520,50 L 680,50 L 680,178 L 520,178 z " style="fill-opacity:0.70;fill:rgb(140,169,221);stroke:rgb(48,69,107);stroke-width:1"/></g>
+<g fill-rule="evenodd"><path d="M 40,530 L 40,466 L 88,466 L 88,530 L 40,530 z " style="fill-opacity:0.95;fill:rgb(43,87,166);stroke:rgb(22,48,94);stroke-width:1"/></g>
+<g fill-rule="evenodd"><path d="M 248,114 L 248,50 L 312,50 L 312,114 L 248,114 z " style="fill-opacity:0.95;fill:rgb(43,87,166);stroke:rgb(22,48,94);stroke-width:1"/></g>
+<g fill-rule="evenodd"><path d="M 648,690 L 648,642 L 680,642 L 680,690 L 648,690 z " style="fill-opacity:0.95;fill:rgb(43,87,166);stroke:rgb(22,48,94);stroke-width:1"/></g>
+<text style="fill:rgb(255,255,255);font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;text-anchor:middle" x="56" y="519.25">C</text>
+<text style="fill:rgb(255,255,255);font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;text-anchor:middle" x="264" y="103.25">A</text>
+<text style="fill:rgb(255,255,255);font-family:Arial,Helvetica,sans-serif;font-size:15px;font-weight:bold;text-anchor:middle" x="664" y="663.25">B</text>
+</svg>

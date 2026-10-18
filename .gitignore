@@ -1,0 +1,12 @@
+# Boost headers, fetched locally — see README for how to unpack them
+third_party/
+
+# build artefacts
+*.o
+bpv
+out/
+
+# assignment handout (the course's material, not mine to redistribute)
+*.docx
+
+.DS_Store

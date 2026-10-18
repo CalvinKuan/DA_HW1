@@ -1,0 +1,25 @@
+# DA HW1 Project-1 test case: the cell shown in the handout figure
+number_of_layers 1
+M1  1
+end_of_layer
+
+number_of_polygons  5
+1    0  0,  0 10,  10 10,  10 0,  0  0
+1   12  3,   12  30,   32 30,  32  3,   12 3
+1   30  0,   30  5,    40  5,    40 0,    30 0
+1    0 40,    0  50,    6  50,    6  40,   0 40
+1   30  42,  30 50,   40  50,  40 42,  30 42
+
+end_of_polygon
+
+number_of_rectangles  3
+1  0 20,  3  24
+1  13  46,  17 50
+1  38  10,  40  13
+end_of_rectangle
+
+number_of_texts   3
+1  C   1  21
+1  A   14  47
+1  B   39  12
+end_of_text

@@ -213,3 +213,10 @@ LEF a single pin can have several PORT shapes.
 The "V" of BPV — precomputing legal via landing positions on each pin. The assignment
 asks only for the blockage and pin steps, and the test case has a single layer, so
 there is no M2 to drop a via from.
+
+## Development note
+
+Written with AI assistance (Anthropic's Claude). The implementation notes above
+record the reasoning behind each non-obvious choice, and the geometry was checked
+against independently hand-computed values: a bounding box of 2000, holes of 50, a
+blockage of 1950, and 7 slices whose areas sum back to 1950.

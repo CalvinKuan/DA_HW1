@@ -4,6 +4,40 @@ DA HW1 / Project-1. A C++17 program that turns a cell layout description into th
 abstract view an auto-place-and-route (APR) tool needs, using Boost.Geometry's
 Boolean operations.
 
+## Quick start
+
+```bash
+git clone https://github.com/CalvinKuan/DA_HW1.git
+cd DA_HW1
+
+# One-time setup: fetch the Boost headers (~180 MB, header-only, nothing to compile).
+# Skip this entirely if Boost is already installed on this machine -- see below.
+mkdir -p third_party
+curl -sL https://archives.boost.io/release/1.88.0/source/boost_1_88_0.tar.gz \
+  | tar xz -C third_party boost_1_88_0/boost
+mv third_party/boost_1_88_0/boost third_party/boost && rmdir third_party/boost_1_88_0
+
+make && make run
+open out/case1_A.svg out/case1_B.svg     # xdg-open on Linux
+```
+
+**If Boost is already on the system include path** (the CentOS7 machine, or any box
+with `boost-devel` installed), skip the download and point the build at it instead:
+
+```bash
+git clone https://github.com/CalvinKuan/DA_HW1.git
+cd DA_HW1
+make BOOST_INC=/usr/include && make run
+```
+
+`make` without the Boost headers in place fails with
+`fatal error: 'boost/geometry.hpp' file not found` -- that means the one-time setup
+above has not been done, not that anything is broken.
+
+View the SVGs in a browser. Avoid macOS Quick Look and Finder thumbnails: they force
+a non-square SVG into a square box and clip the bottom, which looks like a bug in the
+drawing but is not.
+
 ## Background
 
 APR tools do not need a cell's base layers (poly, diffusion). They need to know how
@@ -33,29 +67,20 @@ down onto each pin. This program produces that blockage and those holes.
 It writes two SVG figures: **(A)** the layout exactly as parsed, and **(B)** the
 carved and sliced blockage.
 
-## Build
+## Build options
 
-Boost.Geometry is header-only, so no Boost libraries need to be linked.
+Boost.Geometry is header-only, so no Boost libraries are compiled or linked.
+`third_party/` is not committed, which is why the headers are fetched separately.
 
-```bash
-make            # uses the headers under third_party/
-make run        # runs cases/case1.txt, writes out/case1_A.svg and out/case1_B.svg
-```
+| Command | What it does |
+| --- | --- |
+| `make` | Build `./bpv` using the headers under `third_party/` |
+| `make BOOST_INC=/usr/include` | Build against a system-installed Boost |
+| `make run` | Build, then run `cases/case1.txt` into `out/` |
+| `make parse-check` | Run `cases/case0.txt`, which exercises the parser only |
+| `make clean` | Remove objects, the binary and `out/` |
 
-On a machine where Boost lives on the system include path:
-
-```bash
-make BOOST_INC=/usr/include
-```
-
-`third_party/` is not committed. To build locally, unpack the Boost headers there:
-
-```bash
-mkdir -p third_party
-curl -sL https://archives.boost.io/release/1.88.0/source/boost_1_88_0.tar.gz \
-  | tar xz -C third_party boost_1_88_0/boost
-mv third_party/boost_1_88_0/boost third_party/boost && rmdir third_party/boost_1_88_0
-```
+Requires a C++17 compiler. Tested with Apple clang 17 and Boost 1.88.
 
 ## Usage
 
@@ -69,10 +94,6 @@ mv third_party/boost_1_88_0/boost third_party/boost && rmdir third_party/boost_1
 
 The min spacing defaults to 0.5, the value the assignment specifies for M1. Output
 goes to `<prefix>_A.svg` and `<prefix>_B.svg`.
-
-View the SVGs in a browser. Avoid macOS Quick Look and Finder thumbnails — they
-force a non-square SVG into a square box and clip it, which looks like a bug in the
-drawing but is not.
 
 ## Input format
 
